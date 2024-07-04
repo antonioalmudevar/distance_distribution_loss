@@ -1,0 +1,28 @@
+data:
+  root: /home/voz/shared/database/sed
+  dataset: ESC-50
+  num_mel_bins: 128
+  sample_frequency: 16000
+  frame_length: 25
+  frame_shift: 10
+  window_type: povey
+  freq_mask_param: 0
+  time_mask_param: 0
+
+encoder:
+  arch: beats
+  path: /home/voz/almudevar/distribution_distance_loss/models/BEATs/BEATs_iter3_plus_AS2M.pt
+
+optimizer:
+  optimizer: ADAMW
+  lr: 0.000008
+  batch_size: 16
+  betas: [0.9, 0.98]
+  weight_decay: 0.01
+
+scheduler:
+  epochs: 25
+  lr_decay_rate: 0.1
+  lr_decay_epochs: [50, 75]
+  cosine: True
+  warm_epochs: 5

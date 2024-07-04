@@ -1,0 +1,2 @@
+model_type: RBF
+freeze_encoder: False

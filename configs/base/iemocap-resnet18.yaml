@@ -1,0 +1,32 @@
+data:
+  root: /home/voz/shared/database/emotion
+  dataset: iemocap
+  labels:
+    - neu
+    - hap
+    - ang
+    - sad
+  num_mel_bins: 128
+  sample_frequency: 16000
+  frame_length: 25
+  frame_shift: 10
+  window_type: hanning
+  freq_mask_param: 0
+  time_mask_param: 0
+
+encoder:
+  arch: resnet18
+
+optimizer:
+  optimizer: ADAM
+  lr: 0.0003
+  batch_size: 64
+  betas: [0.95, 0.999]
+  weight_decay: 0.000005
+
+scheduler:
+  epochs: 160
+  lr_decay_rate: 0.1
+  lr_decay_epochs: [80, 120]
+  cosine: False
+  warm_epochs: 5

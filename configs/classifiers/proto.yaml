@@ -1,0 +1,2 @@
+model_type: PROTOTYPES
+freeze_encoder: False

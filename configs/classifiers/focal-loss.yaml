@@ -1,0 +1,2 @@
+model_type: FOCAL_LOSS
+freeze_encoder: False

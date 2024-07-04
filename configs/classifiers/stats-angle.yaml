@@ -1,0 +1,2 @@
+model_type: STATS_ANGLE
+freeze_encoder: False

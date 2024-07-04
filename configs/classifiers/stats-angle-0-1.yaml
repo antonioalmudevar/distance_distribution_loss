@@ -1,0 +1,4 @@
+model_type: STATS_ANGLE
+freeze_encoder: False
+mean_pos_ratio: 0
+mean_neg_ratio: 0

@@ -1,0 +1,46 @@
+#! /mnt/cephfs/home/voz/almudevar/distribution_distance_loss/venv/bin/python
+
+import argparse
+
+from src.train_class import train_classification
+
+
+def parse_args():
+
+    parser = argparse.ArgumentParser(description='Train Classifier')
+
+    parser.add_argument(
+        'config_base', 
+        nargs='?', 
+        type=str,
+        help='General configuration file'
+    )
+
+    parser.add_argument(
+        'config_classifier', 
+        nargs='?', 
+        type=str, 
+        help='classifier configuration file'
+    )
+
+    parser.add_argument(
+        '--n_iters', 
+        nargs='?', 
+        type=int,
+        default=1,
+        help='number of iterations'
+    )
+
+    parser.add_argument(
+        '--restart', 
+        action='store_true',
+        help='restart the training'
+    )
+    parser.set_defaults(restart=False)
+
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    train_classification(**vars(args))

@@ -1,0 +1,2 @@
+model_type: CE
+freeze_encoder: False

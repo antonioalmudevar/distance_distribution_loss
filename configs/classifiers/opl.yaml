@@ -1,0 +1,2 @@
+model_type: OPL
+freeze_encoder: False
